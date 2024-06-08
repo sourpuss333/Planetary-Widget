@@ -1,0 +1,65 @@
+/* Importing the Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
+
+/* Widget container */
+#transits_widget {
+    background-color: #2F3437; /* Match table background */
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid #6FCF97;
+    color: #E5E5E5;
+    font-family: 'Cormorant', serif;
+    text-align: center; /* Center the content */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Add drop shadow to widget */
+}
+
+/* Title and subtitle styling */
+#transits_widget h2, #transits_widget h3 {
+    color: #E5E5E5; /* Match the color of the rest of the text */
+    font-weight: 600; /* Match font weight with table titles */
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add drop shadow effect */
+}
+
+#transits_widget h2 {
+    font-size: 3.5em; /* Further increased size */
+    margin-bottom: 10px; /* Increase space between title and subtitle */
+}
+
+#transits_widget h3 {
+    font-size: 1.3em; /* Slightly smaller size */
+    letter-spacing: 5px; /* Increase letter spacing */
+    text-transform: uppercase; /* Make the font all caps */
+    color: #E5E5E5; /* Match background color of table headers */
+}
+
+/* Table styling */
+#transits_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Add drop shadow to table */
+}
+
+#transits_table th, #transits_table td {
+    border: 2px solid #6FCF97;
+    padding: 10px;
+    text-align: center;
+}
+
+#transits_table th {
+    background-color: #004b3a;
+    color: #E5E5E5;
+    font-weight: 600; /* Semi-bold */
+    font-size: 1.1em; /* Slightly smaller size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add drop shadow effect */
+    text-transform: uppercase; /* Make the font all caps */
+    letter-spacing: 2px; /* Space the letters out */
+}
+
+#transits_table td {
+    background-color: #2F3437;
+    color: #E5E5E5;
+    font-family: 'Cormorant', serif;
+    font-size: 1.2em; /* Increase font size of column entries slightly */
+}
