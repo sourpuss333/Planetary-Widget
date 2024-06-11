@@ -7,8 +7,8 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-# Set Swiss Ephemeris path
-ephe_path = os.path.abspath("C:\\Users\\ameri\\OneDrive\\Documents\\My Notion\\Grimoire\\Widgets\\my-astro-widgets\\swisseph")
+# Determine the absolute path for the Swiss Ephemeris files
+ephe_path = os.path.join(os.path.dirname(__file__), 'swisseph')
 swe.set_ephe_path(ephe_path)
 
 # Set environment variable for Swiss Ephemeris
