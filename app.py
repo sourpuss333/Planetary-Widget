@@ -30,8 +30,6 @@ CELESTIAL_BODIES = [
     ('Chiron', swe.CHIRON)
 ]
 
-ELEMENTS = ['Fire', 'Earth', 'Air', 'Water']
-QUALITIES = ['Cardinal', 'Fixed', 'Mutable']
 SIGNS = [
     {'name': 'Aries', 'element': 'Fire', 'quality': 'Cardinal'},
     {'name': 'Taurus', 'element': 'Earth', 'quality': 'Fixed'},
@@ -118,6 +116,4 @@ def transits():
 if __name__ == '__main__':
     print(f"Current working directory: {os.getcwd()}")
     print(f"Swiss Ephemeris path: {ephe_path}")
-    app.run(debug=True)
-if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
