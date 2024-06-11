@@ -1,0 +1,74 @@
+/* Importing the Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
+
+/* Widget container */
+#transits_widget {
+    background-color: #2F3437;
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid #6FCF97;
+    color: #E5E5E5;
+    font-family: 'Cormorant', serif;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Title and subtitle styling */
+#transits_widget h2, #transits_widget h3 {
+    color: #E5E5E5;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#transits_widget h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+#transits_widget h3 {
+    font-size: 1.3em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #E5E5E5;
+}
+
+/* Table styling */
+#transits_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#transits_table th, #transits_table td {
+    border: 2px solid #6FCF97;
+    padding: 10px;
+    text-align: center; /* Center text in each cell */
+    vertical-align: middle; /* Align cell content vertically */
+}
+
+#transits_table th {
+    background-color: #004b3a;
+    color: #E5E5E5;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#transits_table td {
+    background-color: #2F3437;
+    color: #E5E5E5;
+    font-family: 'Cormorant', serif;
+    font-size: 1.2em;
+}
+
+/* Updated Icon Styling */
+.icon {
+    width: 18px; /* Set fixed width */
+    height: 18px; /* Set fixed height */
+    margin-right: 5px;
+    vertical-align: middle; /* Align icon with text vertically */
+}

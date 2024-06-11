@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Planetary Transits</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div id="transits_widget">
+        <h2>Current Planetary Transits</h2>
+        <h3 id="subtitle"></h3>
+        <table id="transits_table">
+            <thead>
+                <tr>
+                    <th>Planet</th>
+                    <th>Sign</th>
+                    <th>Position</th>
+                    <th>Element</th>
+                    <th>Modality</th> <!-- Changed from Quality to Modality -->
+                </tr>
+            </thead>
+            <tbody id="transits_body">
+                <!-- Rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/js/transits.js"></script>
+</body>
+</html>
