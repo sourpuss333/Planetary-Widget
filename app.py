@@ -3,16 +3,20 @@ from flask import Flask, jsonify, render_template
 from flask_cors import CORS
 from datetime import datetime
 import os
+import pytz
 
 app = Flask(__name__)
 CORS(app)
 
-# Determine the absolute path for the Swiss Ephemeris files
+# Set Swiss Ephemeris path
 ephe_path = os.path.join(os.path.dirname(__file__), 'swisseph')
 swe.set_ephe_path(ephe_path)
 
 # Set environment variable for Swiss Ephemeris
 os.environ['SE_EPHE_PATH'] = ephe_path
+
+# Timezone for New York
+ny_tz = pytz.timezone('America/New_York')
 
 CELESTIAL_BODIES = [
     ('Sun', swe.SUN),
@@ -93,12 +97,14 @@ def index():
 
 @app.route('/api/subtitle')
 def subtitle():
-    subtitle_text = f"{datetime.now().strftime('%B %d, %Y, %I:%M %p').lstrip('0').replace(' 0', ' ')} - Providence, RI"
+    ny_time = datetime.now(ny_tz)
+    subtitle_text = f"{ny_time.strftime('%B %d, %Y, %I:%M %p').lstrip('0').replace(' 0', ' ')} - Providence, RI"
     return jsonify({'subtitle': subtitle_text})
 
 @app.route('/api/transits')
 def transits():
-    julian_day = swe.julday(datetime.utcnow().year, datetime.utcnow().month, datetime.utcnow().day, datetime.utcnow().hour + datetime.utcnow().minute / 60.0)
+    utc_now = datetime.utcnow()
+    julian_day = swe.julday(utc_now.year, utc_now.month, utc_now.day, utc_now.hour + utc_now.minute / 60.0)
     transits = {}
     for body, body_id in CELESTIAL_BODIES:
         result, ret = swe.calc_ut(julian_day, body_id)
